@@ -19,11 +19,19 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.light(),
-      home: Container(
-        child: Center(child: Text('Audi Quattro')),
-      ),
+      home: HomePage(),
     );
   }
+
+  //@override
+  //Widget build(BuildContext context) {
+  //  return MaterialApp(
+  //    theme: ThemeData.light(),
+  //    home: Container(
+  //      child: Center(child: Text('Audi Quattro')),
+  //    ),
+  //  );
+  //}
 
   //@override
   //Widget build(BuildContext context) {
@@ -38,5 +46,30 @@ class AppWidget extends StatelessWidget {
   //      ),
   //  );
   //}
+}
+
+// StatefulWidget
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() {
+    return HomePageState();
+  }
+}
+
+class HomePageState extends State<HomePage>{
+  int counter = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: Center(child: GestureDetector(child: Text('Contador: $counter'),
+        onTap: () {
+          setState(() { // settar estado
+            counter++;
+          });  
+        },
+        )),
+    );
+  }
 
 }
