@@ -1,5 +1,6 @@
 // StatefulWidget
 import 'package:flutter/material.dart';
+import 'package:hello_world/app_controller.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -17,18 +18,10 @@ class HomePageState extends State<HomePage>{
       appBar: AppBar(
         title: Text("Home Page"),
       ),
-      body: Container(
-        height: 200,
-        width: 200,
-        color: Colors.black,
-        child: Align( // criar um novo render para o elemento
-          alignment: Alignment.center,
-          child: Container(
-            height: 100,
-            width: 100,
-            color: Colors.green,
-          ),
-        ),
+      body: Center(
+        child: Switch(value: AppController.instance.isDarkTheme, onChanged: (value){
+          AppController.instance.changeTheme();
+        }),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
