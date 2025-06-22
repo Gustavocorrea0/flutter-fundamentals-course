@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/home_page.dart';
+//import 'package:hello_world/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -53,11 +53,12 @@ class _LoginPageState extends State<LoginPage> {
                       //Navigator.of(context).push(
                       //  MaterialPageRoute(builder: (context) => HomePage()) // navegacao manual - com sobreposicao (retorno)
                       //);
+                      //Navigator.of(context).pushReplacement(
+                      //  MaterialPageRoute(builder: (context) => HomePage()) // navegacao manual - sem sobreposicao (retorno)
+                      //);
 
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => HomePage()) // navegacao manual - sem sobreposicao (retorno)
-                      );
-
+                      //Navigator.of(context).pushNamed("/home"); // navegacao nomeadas - com sobreposicao (retorno) 
+                      Navigator.of(context).pushReplacementNamed("/home"); // navegacao nomeadas - sem sobreposicao (retorno)
                     } else {
                       print("Login Invalido");
                     }
