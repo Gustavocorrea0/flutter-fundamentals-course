@@ -1,7 +1,8 @@
 // StatelessWidget
 import 'package:flutter/material.dart';
 import 'package:hello_world/app_controller.dart';
-import 'package:hello_world/home_page.dart';
+//import 'package:hello_world/home_page.dart';
+import 'package:hello_world/login_page.dart';
 
 class AppWidget extends StatelessWidget {
 
@@ -17,9 +18,11 @@ class AppWidget extends StatelessWidget {
         return MaterialApp(
           theme: ThemeData(
             primarySwatch: Colors.blue,
-            brightness: AppController.instance.isDarkTheme ? Brightness.dark: Brightness.light,
+            //brightness: AppController.instance.isDarkTheme ? Brightness.dark: Brightness.light,
+            brightness:  Brightness.dark
           ),
-          home: HomePage(),
+          //home: HomePage(),
+          home: LoginPage(),
         );
       }, 
     );

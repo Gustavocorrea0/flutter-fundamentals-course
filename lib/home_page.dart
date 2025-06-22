@@ -25,6 +25,8 @@ class HomePageState extends State<HomePage>{
         width: double.infinity,
         height: double.infinity,
         child: Column(
+        //child: ListView(
+          //scrollDirection: Axis.horizontal, // DIRECAO DO SCROLL
           mainAxisAlignment: MainAxisAlignment.center,
           //crossAxisAlignment: CrossAxisAlignment.center,
           children: [
