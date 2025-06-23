@@ -26,12 +26,10 @@ class _LoginPageState extends State<LoginPage> {
               children: [
 
                 Container(
-                  width: 100,
-                  height: 100,
-                  child: Image.network(
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/BMW_logo_%28gray%29.svg/600px-BMW_logo_%28gray%29.svg.png"
-                  
-                  ),
+                  width: 200,
+                  height: 200,
+                  //child: Image.network("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/BMW_logo_%28gray%29.svg/600px-BMW_logo_%28gray%29.svg.png"),
+                  child: Image.asset('assets/images/logo-bmw.png')
                 ),
 
                 Container(height: 40),
