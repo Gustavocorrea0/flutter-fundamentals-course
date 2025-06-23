@@ -24,6 +24,18 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+
+                Container(
+                  width: 100,
+                  height: 100,
+                  child: Image.network(
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/BMW_logo_%28gray%29.svg/600px-BMW_logo_%28gray%29.svg.png"
+                  
+                  ),
+                ),
+
+                Container(height: 40),
+
                 TextField(
                   onChanged: (text) {
                     email = text;
