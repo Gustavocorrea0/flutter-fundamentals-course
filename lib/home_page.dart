@@ -15,6 +15,35 @@ class HomePageState extends State<HomePage>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer( // menu lateral
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+              currentAccountPicture: ClipRRect(
+                borderRadius: BorderRadiusGeometry.circular(40),
+                child: Image.network("https://www.signaturefineart.com/cdn/shop/files/Homer-Simpson-Patrice-Murciano-47299831.jpg?v=1743369512&width=1445"),
+              ), 
+              accountName: Text("Gustavo Alfredo"),
+              accountEmail: Text("gustavo@alfredo.com")),
+            ListTile(
+              leading: Icon(Icons.home), // icone home
+              title: Text("Home"),
+              subtitle: Text("start screen"),
+              onTap: (){
+                print("Home");
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.exit_to_app), // icone home
+              title: Text("Logout"),
+              subtitle: Text("logout screen"),
+              onTap: (){
+                Navigator.of(context).pushReplacementNamed("/");
+              },
+            )
+          ],
+        ),
+      ),
       appBar: AppBar(
         title: Text("Home Page"),
         actions: [
